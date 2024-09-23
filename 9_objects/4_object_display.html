@@ -1,0 +1,70 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+
+<body>
+    <h3>Displaying the Object</h3>
+    <div id="demo"></div>
+    <hr>
+    
+    <h3>Displaying the Object Properties by name</h3>
+    <div id="demo2"></div>
+    <hr>
+
+    <h3>Displaying the Object Properties in a Loop</h3>
+    <div id="demo3"></div>
+    <hr>
+
+    <h3>Displaying the Object using Object.values()</h3>
+    <div id="demo4"></div>
+    <hr>
+
+    <h3>Displaying the Object using Object.entries()</h3>
+    <div id="demo5"></div>
+    <hr>
+
+    <h3>Displaying the Object using JSON.stringify()</h3>
+    <div id="demo6"></div>
+    <hr>
+
+</body>
+
+<script>
+    const person = {
+        name: "Amir",
+        last_name: "Astarabadi",
+        fullName: function () {
+            return this.name + " " + this.last_name;
+        }
+    }
+
+    document.getElementById("demo").innerHTML = person;
+
+    document.getElementById("demo2").innerHTML = person.name;
+
+    let message = "Hi From ";
+    for (let prop in person) {
+        message += (person[prop] + " ")
+    }
+    document.getElementById("demo3").innerHTML = message;
+
+    const data = Object.values(person);
+    document.getElementById("demo4").innerHTML = data;
+
+    let dictionary = "";
+    for (let [prop, value] of Object.entries(person)) {
+        dictionary += (prop + ": " + value + "<br>")
+    }
+    document.getElementById("demo5").innerHTML = dictionary;
+
+    document.getElementById("demo6").innerHTML = JSON.stringify(person);
+
+</script>
+
+</html>

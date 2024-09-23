@@ -1,0 +1,35 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+
+<body>
+    <h1>See Console</h1>
+
+</body>
+
+<script>
+    function Person(name, last_name) {
+        this.name = name;
+        this.last_name = last_name;
+
+        this.fullname = function()
+        {
+            return this.name + " " + this.last_name;
+        }
+    };
+
+    p1 = new Person('amir', 'astarabadi');
+    p2 = new Person('kaveh', 'astarabadi');
+
+    console.log(JSON.stringify(p1));
+    console.log(JSON.stringify(p2));
+    console.log(p2.fullname());
+</script>
+
+</html>

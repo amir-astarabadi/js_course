@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+
+<body>
+    <h1>See Console</h1>
+</body>
+
+<script>
+    const person = {
+        name: "",
+        last_name: "",
+    }
+    console.log(person)
+
+    const p1 = person;
+    p1.name = "Amir";
+    p1.last_name = "astarabadi";
+    console.log(p1);
+
+
+    const p2 = person;
+    p2['name'] = "Kaveh";
+    p2['last_name'] = "astarabadi";
+    console.log(p2);
+
+    const p3 = new Object();
+    p3.age = 22;
+    p3.last_name = "alizadeh";
+    console.log(p3);
+</script>
+
+</html>

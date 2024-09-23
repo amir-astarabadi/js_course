@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+
+<body>
+    <h1>See Console</h1>
+</body>
+
+<script>
+    const person = {
+        name: "",
+        last_name: "",
+        car: {
+            model: undefined,
+            brand: ""
+        }
+    }
+
+    const kaveh = person;
+    const BMW = {
+        model: "2024",
+        brand: "BMW",
+    };
+
+    kaveh.name = "Kaveh";
+    kaveh.last_name = "Astarabadi";
+    kaveh.car = BMW
+
+    console.log(kaveh)
+    
+    kaveh.car.brand = "Mercedes"
+    console.log(kaveh.car)
+
+
+</script>
+
+</html>

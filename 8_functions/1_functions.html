@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+
+<body>
+    <input id="name" type="text" placeholder="Enter Your Name">
+    <br>
+    <button onclick="runFunctions()">Click and see console</button>
+
+</body>
+<script>
+    let sayHi = (name) => console.log("Hi " + name);
+
+    function sayBye(name) {
+        console.log("Bye " + name);
+    }
+
+    function runFunctions(){
+        let name = document.getElementById('name').value
+        sayHi(name);
+        sayBye(name);
+    }
+
+    console.log("sayHi is a " + typeof sayHi)
+    console.log("sayBye is a " + typeof sayBye)
+</script>
+
+</html>
