@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+
+<body>
+
+    <input id="inp" type="text" placeholder="Enter your Text" onkeyup="countCharacters()">
+    <p > Count Of Chars: <span id="display">0</span> </p>
+    
+
+</body>
+
+<script>
+    function countCharacters()
+    {
+        document.getElementById('display').innerHTML =document.getElementById('inp').value.length
+    }
+</script>
+
+</html>
