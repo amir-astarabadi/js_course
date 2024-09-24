@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+</head>
+
+<body>
+
+    <h1>See Console</h1>
+
+</body>
+
+<script>
+    const nums = [22, 33, 44, 55];
+    const me = { name: "amir", age: 36 };
+
+    console.log("for of on array");
+    for(let i of nums){
+        console.log(i);
+    }
+
+    console.log("for of on object");
+    for(const [i, j] of Object.entries(me)){
+        console.log(i, j);
+    }
+</script>
+
+</html>
