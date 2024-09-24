@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body style="min-height: 5000px;" >
+
+    <button onclick="showTime()">Show Time</button>
+
+    <div id="display"></div>
+
+    <div id="wheel" onwheel="magic()">
+        Hi
+    </div>
+
+    <p>
+        <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">List of all events</a>
+    </p>
+
+</body>
+
+<script>
+    function showTime() {
+        document.getElementById('display').innerHTML = Date();
+    }
+
+    function magic() {
+        alert("calm down");
+    }
+</script>
+
+</html>
