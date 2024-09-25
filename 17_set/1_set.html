@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set</title>
+</head>
+
+<body>
+
+    <h1>See Console</h1>
+
+    <script>
+        const mySet = new Set([1, 1, 3, 5, 3])
+        mySet.add(50)
+        mySet.add(5)
+        for (item of mySet) {
+            console.log(item)
+        }
+
+        console.log("5 Exists? " + mySet.has(5))
+
+        mySet.forEach(function (item) {
+            return item += 5;
+        })
+        for (item of mySet) {
+            console.log(item)
+        }
+
+        for(item of mySet.values()){
+            console.log(item * 10);
+        }
+
+
+        for(key of mySet.keys()){
+            console.log(key);
+        }
+
+        for(const [key, value] of mySet.entries()){
+            console.log(key + " " + value);
+        }
+    </script>
+</body>
+
+</html>
