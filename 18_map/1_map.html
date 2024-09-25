@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+
+<body>
+
+    <h1>See Console</h1>
+
+    <script>
+        const myMap = new Map([
+            ['amir', 1367],
+            ['kaveh', 1396],
+        ])
+
+        myMap.set('ferdos', 1368)
+
+        for (const [key, value] of myMap) {
+            console.log(key + " born at " + value)
+        }
+
+
+        if (myMap.has('amir')) {
+            myMap.delete('amir')
+        }
+
+        for (const key of myMap) {
+            console.log(key + " born at " + myMap.get(key))
+        }
+
+    </script>
+</body>
+
+</html>
