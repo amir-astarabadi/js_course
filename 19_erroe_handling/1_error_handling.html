@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+
+<body>
+
+    <h1>Errors Shows Here</h1>
+    <p id="errors"></p>
+
+    <input type="text" placeholder="Enter Your age" id="age">
+    <button onclick="validate()">Submit</button>
+    <p id="validation"></p>
+
+
+    <script>
+
+        try {
+            addAlert("show alert")
+        } catch (err) {
+            document.getElementById('errors').innerHTML = "Error Mesasge: " + err.message + "<br>" + "Error Name: " + err.name;
+        }
+
+        function validate() {
+            try {
+
+                let age = document.getElementById('age').value
+                console.log(age)
+                if (age < 10) {
+                    throw "Invalid age"
+                }
+            } catch (err) {
+                document.getElementById('validation').innerHTML = err
+            }
+        }
+
+    </script>
+</body>
+
+</html>
