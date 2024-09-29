@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This</title>
+</head>
+
+<body>
+
+    <h1 id="demo">demo</h1>
+    <button onclick="changeDemo(event, this)">Change Demo</button>
+
+
+    <script>
+        function changeDemo(event, element) {
+            document.getElementById('demo').innerHTML = "Changed Demo"
+            element.innerHTML = "Changed"
+            element.disabled = true
+            element.style.color = 'red'
+            console.log(event)
+        }
+    </script>
+</body>
+
+</html>
