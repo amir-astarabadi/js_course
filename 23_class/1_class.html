@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+<body>
+
+        <p id="demo"> Car : <span id="data"></span></p>
+    
+        <script>
+            console.log("amir")
+            class Car {
+                constructor(name, model) {
+                    this.name = name;
+                    this.model = model;
+                }
+    
+                age() {
+                    return (new Date).getFullYear() - this.model;
+                }
+            }
+    
+            const car = new Car("BMW", 2022)
+            document.getElementById('data').innerHTML = "Name: " + car.name + ", Age: " + car.age()
+        </script>
+</body>
+</html>
