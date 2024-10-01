@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack</title>
+</head>
+
+<body>
+    <h1 id="demo"></h1>
+
+
+    <script>
+        const demo = document.getElementById('demo');
+
+        // a function that can be a callback
+        domDisplay = (something) => demo.innerHTML = something
+
+        // an other function that can be a callback
+        consoleDisplay = (something) => console.log(something)
+
+        // a function that accept a callback
+        sumAndDisplay = (a, b, display) => {
+            display(a + b);
+        }
+
+        sumAndDisplay(3,7, consoleDisplay);
+        sumAndDisplay(3,7, domDisplay);
+    </script>
+</body>
+
+</html>
